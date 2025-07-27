@@ -1,16 +1,41 @@
-<!-- donaciones.html -->
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>Donaciones</title>
 </head>
 <body>
-  <h1>Apoya nuestra causa</h1>
-  <p>Tu contribución ayuda a continuar con nuestros programas.</p>
-  <form>
-    <label>Monto a donar:</label>
-    <input type="number" name="monto">
-    <button type="submit">Donar</button>
-  </form>
+
+  <header>
+    <h1>Apoya nuestra causa</h1>
+    <p>Tu contribución ayuda a continuar con nuestros programas.</p>
+  </header>
+
+  <main>
+    <form>
+      <fieldset>
+        <legend>Formulario de Donación</legend>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="monto">Monto a donar (CLP):</label><br>
+        <input type="number" id="monto" name="monto" min="1" required><br><br>
+
+        <label>Método de pago:</label><br>
+        <input type="radio" id="tarjeta" name="pago" value="tarjeta" required>
+        <label for="tarjeta">Tarjeta</label><br>
+        <input type="radio" id="transferencia" name="pago" value="transferencia">
+        <label for="transferencia">Transferencia</label><br><br>
+
+        <button type="submit">Donar</button>
+      </fieldset>
+    </form>
+  </main>
 </body>
 </html>
+
+
